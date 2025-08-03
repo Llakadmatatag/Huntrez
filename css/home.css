@@ -1,0 +1,804 @@
+/* Hero Section */
+.hero {
+    min-height: auto; /* Diubah dari 100vh ke auto */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 1rem 4rem; /* Menambahkan padding top lebih besar */
+    margin-bottom: 0; /* Memastikan tidak ada margin bawah */
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    z-index: 1;
+}
+
+/* Add a subtle overlay for better text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(10, 10, 35, 0.7), rgba(26, 26, 64, 0.7));
+    z-index: -1;
+}
+
+.hero::before,
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 239, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero::before {
+    top: -150px;
+    left: -150px;
+}
+
+.hero::after {
+    bottom: -150px;
+    right: -150px;
+    background: radial-gradient(circle, rgba(255, 0, 184, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.logo-container {
+    position: relative;
+    margin: 0.5rem 0 1rem; /* Mengurangi margin atas dan bawah */
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.logo-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.floating-image {
+    position: relative;
+    max-width: 270px; /* Diperbesar 1.5x dari 180px */
+    height: auto;
+    z-index: 1;
+    transition: all 0.8s ease-in-out; /* Diperlambat transisinya */
+    transform-origin: center center;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+/* Rotate effect on hover */
+.floating-image:hover {
+    animation: rotate360 0.8s ease-in-out 1;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.float-left {
+    animation: floatLeft 10s ease-in-out infinite; /* Diperlambat durasinya */
+}
+
+.float-right {
+    animation: floatRight 10s ease-in-out infinite 2.5s; /* Diperlambat durasi dan delay-nya */
+}
+
+@keyframes floatLeft {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg); /* Rotasi lebih halus */
+    }
+    50% {
+        transform: translateY(-15px) rotate(3deg); /* Perpindahan lebih halus */
+    }
+}
+
+@keyframes floatRight {
+    0%, 100% {
+        transform: translateY(0) rotate(3deg); /* Rotasi lebih halus */
+    }
+    50% {
+        transform: translateY(-15px) rotate(-3deg); /* Perpindahan lebih halus */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-image {
+        max-width: 180px; /* Diperbesar 1.5x dari 120px */
+    }
+    
+    .logo-container {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-image {
+        max-width: 150px; /* Diperbesar 1.5x dari 100px */
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .float-left, .float-right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .float-left {
+        left: 10px;
+    }
+    
+    .float-right {
+        right: 10px;
+    }
+}
+
+.site-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem; /* Dikurangi dari 1.5rem */
+    transition: transform 0.3s ease;
+}
+
+.site-logo:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--text-light);
+    text-shadow: 0 0 10px rgba(0, 239, 255, 0.5);
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.logo-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-huntrez {
+    display: inline-block;
+    position: relative;
+    color: var(--accent-1);
+    background: linear-gradient(90deg, #00efff, #ff00b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(0, 239, 255, 0.5);
+    animation: colorSlide 5s infinite alternate, wave 3s ease-in-out infinite;
+    line-height: 1;
+    transform-origin: center;
+}
+
+.logo-rewards {
+    display: inline-block;
+    color: var(--text-light);
+    text-shadow: 0 0 10px rgba(255, 0, 184, 0.5);
+    line-height: 1;
+    margin-top: -0.5rem;
+}
+
+/* Stack on mobile */
+@media (max-width: 768px) {
+    .logo {
+        flex-direction: column;
+        white-space: nowrap;
+    }
+    
+    .logo-huntrez {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .logo-rewards {
+        margin: 0;
+        padding: 0;
+        margin-top: -0.8rem;
+    }
+}
+
+@keyframes colorSlide {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 15px rgba(0, 239, 255, 0.5);
+    }
+    25% {
+        transform: translateY(-3px) scale(1.02);
+        text-shadow: 0 0 20px rgba(0, 239, 255, 0.8);
+    }
+    50% {
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 15px rgba(255, 0, 184, 0.5);
+    }
+    75% {
+        transform: translateY(3px) scale(1.02);
+        text-shadow: 0 0 20px rgba(255, 0, 184, 0.8);
+    }
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    color: var(--accent-1);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 1rem; /* Mengurangi margin bawah */
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+}
+
+.highlight-code {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--accent-3), var(--accent-4));
+    color: white;
+    font-weight: bold;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    animation: pulse 2s infinite;
+    margin: 0 0.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-code::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shine 3s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1) translateY(-2px); }
+    50% { transform: scale(1.05) translateY(-2px); }
+    100% { transform: scale(1) translateY(-2px); }
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
+
+/* Featured Leaderboard */
+.featured-leaderboard {
+    margin: 1rem auto 2rem; /* Mengurangi margin atas dan bawah */
+    text-align: center;
+    max-width: 800px;
+}
+
+.featured-leaderboard h3 {
+    color: var(--accent-1);
+    font-size: 1.5rem;
+    margin-bottom: 1rem; /* Mengurangi margin bawah */
+    text-shadow: 0 0 10px rgba(0, 239, 255, 0.3);
+}
+
+.sponsor-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto 0;
+    width: 100%;
+}
+
+.sponsor-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    min-width: 200px;
+    height: 60px;
+    background: rgba(10, 10, 35, 0.8);
+    border: 2px solid var(--accent-1);
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 239, 255, 0.3);
+    background: rgba(20, 20, 60, 0.9);
+    border-color: var(--accent-2);
+}
+
+.sponsor-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 239, 255, 0.3);
+}
+
+.sponsor-logo {
+    height: 100%;
+    max-height: 50px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(1.2) drop-shadow(0 0 5px rgba(0, 239, 255, 0.5));
+}
+
+.sponsor-btn:hover .sponsor-logo {
+    transform: scale(1.1);
+}
+
+/* Efek hover yang mirip dengan tombol primary */
+.sponsor-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.2) 50%, 
+        rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+
+.sponsor-btn:hover::after {
+    transform: translateX(100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sponsor-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .sponsor-btn {
+        min-width: 45%;
+        padding: 0.75rem 1rem;
+        height: 50px;
+    }
+    
+    .sponsor-logo {
+        max-height: 40px;
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .sponsor-btn {
+        width: 100%;
+        max-width: 250px;
+        height: 50px;
+    }
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+    margin: 2rem auto 0;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.cta-buttons .btn-primary {
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-buttons .btn-primary:hover,
+.cta-buttons .btn-primary:focus {
+    color: #000 !important;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent-1));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 239, 255, 0.3);
+}
+
+/* Scroll Down Arrow */
+.scroll-down {
+    position: relative;
+    width: 40px;
+    height: 60px;
+    margin: 20px auto 0;
+    display: block;
+}
+
+.scroll-down span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid var(--accent-1);
+    border-right: 2px solid var(--accent-1);
+    transform: rotate(45deg);
+    margin: -10px auto;
+    animation: scrollDown 2s infinite;
+    opacity: 0;
+}
+
+.scroll-down span:nth-child(1) {
+    animation-delay: -0.2s;
+}
+
+.scroll-down span:nth-child(2) {
+    animation-delay: -0.4s;
+}
+
+.scroll-down span:nth-child(3) {
+    animation-delay: -0.6s;
+}
+
+@keyframes scrollDown {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+}
+
+.scroll-down:hover span {
+    border-color: var(--accent-2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .logo {
+        font-size: 3rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    .cta-buttons {
+        width: 100%;
+        max-width: 300px;
+        margin: 2rem auto 0;
+        padding: 0 1rem;
+    }
+}
+
+/* Exclusive Bonuses Section */
+.exclusive-bonuses {
+    padding: 4rem 0;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.exclusive-bonuses.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out 0.2s;
+    will-change: opacity, transform;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--accent-1);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.promo-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Base card style */
+.promo-card {
+    position: relative;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.5, 0, 0, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    will-change: transform, opacity, box-shadow;
+}
+
+/* Gradient overlay for cards */
+.promo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+/* Different gradients for each card */
+.promo-card:nth-child(1)::before {
+    background: linear-gradient(135deg, rgba(0, 119, 182, 0.3), rgba(3, 4, 94, 0.3));
+}
+
+.promo-card:nth-child(2)::before {
+    background: linear-gradient(135deg, rgba(202, 240, 248, 0.3), rgba(0, 180, 216, 0.3));
+}
+
+/* Add more nth-child selectors if you have more cards */
+
+/* Hover effects */
+.promo-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.promo-card:hover::before {
+    opacity: 0.7;
+}
+
+/* Accent colors for different cards */
+.promo-card:nth-child(1) .promo-code .code,
+.promo-card:nth-child(1) .promo-details h3,
+.promo-card:nth-child(1) .special-bonus h4,
+.promo-card:nth-child(1) .info-link {
+    color: #48cae4;
+}
+
+.promo-card:nth-child(2) .promo-code .code,
+.promo-card:nth-child(2) .promo-details h3,
+.promo-card:nth-child(2) .special-bonus h4,
+.promo-card:nth-child(2) .info-link {
+    color: #90e0ef;
+}
+
+/* Button styles */
+.promo-card:nth-child(1) .promo-btn {
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+}
+
+.promo-card:nth-child(2) .promo-btn {
+    background: linear-gradient(135deg, #90e0ef, #00b4d8);
+    color: #03045e;
+}
+
+/* Sponsor button image styles */
+.sponsor-buttons .sponsor-logo {
+    max-height: 40px; /* Adjust this value to make the image larger/smaller */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Specific style for xfun1.png */
+.sponsor-buttons a[href*="xfun"] .sponsor-logo {
+    transform: scale(1.4); /* Makes the xfun1.png 40% larger */
+    transform-origin: center;
+}
+
+.promo-card .promo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.promo-logo {
+    margin-bottom: 1.5rem;
+}
+
+.promo-logo img {
+    max-width: 180px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.promo-code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.promo-code .code {
+    color: var(--accent-1);
+    font-weight: 700;
+}
+
+.promo-details {
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.promo-details h3 {
+    color: var(--accent-1);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.bonus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.bonus-list li {
+    padding: 0.5rem 0;
+    color: var(--text-light);
+}
+
+.special-bonus {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+
+.special-bonus h4 {
+    color: var(--accent-1);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.promo-btn {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.promo-btn:hover {
+    background: linear-gradient(135deg, var(--accent-2), var(--accent-1));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bonus-info {
+    margin-top: auto;
+}
+
+.info-link {
+    color: var(--accent-1);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for Exclusive Bonuses */
+@media (max-width: 768px) {
+    .exclusive-bonuses {
+        padding: 3rem 1rem;
+    }
+    
+    .promo-cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Huntrez Rewards - XFun Leaderboard">
+    <title>XFun Leaderboard - Huntrez Rewards</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Gabarito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/xfun.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body class="xfun-page">
+    <!-- Home Logo -->
+    <a href="index.html" class="home-logo" aria-label="Back to Home">
+        <img src="images/logo.png" alt="Home" class="home-logo-img">
+    </a>
+    
+    <!-- Sticky Menu -->
+    <div class="sticky-menu">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+            <span>Menu</span>
+        </button>
+        <nav class="dropdown-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="xfun.html" class="active"><img src="images/xfun-menu.png" alt="xfun" class="menu-icon"> XFun Leaderboard</a></li>
+                <li><a href="#" onclick="event.preventDefault(); showComingSoon();"><img src="images/upgrader-menu.jpg" alt="Upgrader" class="menu-icon"> Upgrader Leaderboard</a></li>
+                <li><a href="csbattle.html"><img src="images/csbattle-menu.jpg" alt="CSBattle" class="menu-icon"> CSBattle Leaderboard</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Leaderboard Section -->
+        <section class="leaderboard-section animate-on-load">
+            <div class="container">
+                <div class="leaderboard-header animate-on-load" style="animation-delay: 0.2s">
+                    <div class="logo-title">
+                        <img src="images/logo.png" alt="Huntrez" class="header-logo">
+                        <i class="fas fa-handshake logo-separator"></i>
+                        <a href="https://x.fun/r/Huntrez" rel="noopener noreferrer" target="_blank">
+                            <img src="images/xfun1.png" alt="XFun" class="header-logo xfun-logo">
+                        </a>
+                    </div>
+                    <h2>250 COINS MONTHLY LEADERBOARD</h2>
+                    
+                    <div class="leaderboard-note">
+                        <p>To be eligible for the leaderboard, make sure to use code <a href="https://x.fun/r/Huntrez" rel="noopener noreferrer" target="_blank" class="promo-code"><strong>HUNTREZ</strong></a> before making a deposit or wagering.</p>
+                    </div>
+                    
+                    <!-- Countdown Timer -->
+                    <div class="countdown-container">
+                        <p>Time remaining until leaderboard ends:</p>
+                        <div id="countdown" class="countdown">
+                            <div class="countdown-item">
+                                <span id="days">00</span>
+                                <span class="countdown-label">Days</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span id="hours">00</span>
+                                <span class="countdown-label">Hours</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span id="minutes">00</span>
+                                <span class="countdown-label">Minutes</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span id="seconds">00</span>
+                                <span class="countdown-label">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Podium Section -->
+                <div class="podium-container animate-on-load" style="animation-delay: 0.4s">
+                    <div class="podium">
+                        <!-- Second Place -->
+                        <div class="podium-item second-place">
+                            <div class="podium-crown">
+                                <i class="fas fa-crown silver"></i>
+                            </div>
+                            <div class="podium-rank">2nd</div>
+                            <div class="podium-avatar">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='110' height='110' viewBox='0 0 110 110'><rect width='100%' height='100%' fill='%23f0f0f0'/><text x='50%' y='50%' font-size='14' text-anchor='middle' dy='.3em' fill='%23999'>2nd</text></svg>" alt="Second Place" class="podium-img">
+                            </div>
+                            <div class="podium-details">
+                                <div class="podium-name">-</div>
+                                <div class="podium-wagered">-</div>
+                                <div class="podium-prize">-</div>
+                            </div>
+                        </div>
+                        
+                        <!-- First Place -->
+                        <div class="podium-item first-place">
+                            <div class="podium-crown">
+                                <i class="fas fa-crown gold spin"></i>
+                            </div>
+                            <div class="podium-rank">1st</div>
+                            <div class="podium-avatar">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'><rect width='100%' height='100%' fill='%23f0f0f0'/><text x='50%' y='50%' font-size='16' text-anchor='middle' dy='.3em' fill='%23999'>1st</text></svg>" alt="First Place" class="podium-img">
+                            </div>
+                            <div class="podium-details">
+                                <div class="podium-name">-</div>
+                                <div class="podium-wagered">-</div>
+                                <div class="podium-prize">-</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Third Place -->
+                        <div class="podium-item third-place">
+                            <div class="podium-crown">
+                                <i class="fas fa-crown bronze"></i>
+                            </div>
+                            <div class="podium-rank">3rd</div>
+                            <div class="podium-avatar">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'><rect width='100%' height='100%' fill='%23f0f0f0'/><text x='50%' y='50%' font-size='12' text-anchor='middle' dy='.3em' fill='%23999'>3rd</text></svg>" alt="Third Place" class="podium-img">
+                            </div>
+                            <div class="podium-details">
+                                <div class="podium-name">-</div>
+                                <div class="podium-wagered">-</div>
+                                <div class="podium-prize">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="leaderboard-container animate-on-load" style="animation-delay: 0.6s">
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Wagered</th>
+                                <th>Prize</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+                            <!-- Leaderboard data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    
+                    <!-- Pagination Container -->
+                    <div class="pagination">
+                        <!-- Pagination buttons will be added here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo Section -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Huntrez Rewards" class="site-logo">
+                        <h2 class="logo"><span class="logo-huntrez">Huntrez</span><span class="logo-rewards">Rewards</span></h2>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#exclusive-bonuses">Bonuses</a></li>
+                    </ul>
+                </div>
+
+                <!-- Leaderboards -->
+                <div class="footer-section animate-on-load" style="animation-delay: 0.6s">
+                    <h3>Leaderboards</h3>
+                    <ul class="footer-links">
+                        <li><a href="xfun.html">XFun</a></li>
+                        <li><a href="#" onclick="event.preventDefault(); showComingSoon();">Upgrader</a></li>
+                        <li><a href="csbattle.html">CSBattle</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect with Us -->
+                <div class="footer-section animate-on-load" style="animation-delay: 1.0s">
+                    <h3>Connect with Us</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/23nYjWqreu" rel="noopener noreferrer" target="_blank" class="social-link" aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="https://kick.com/huntrez" rel="noopener noreferrer" target="_blank" class="social-link kick-link" aria-label="Kick">
+                            <img src="images/kick-logo.webp" alt="Kick" class="kick-logo">
+                        </a>
+                    </div>
+                    <div class="age-warning" style="margin-top: 1.5rem;">
+                        <p>18+ | Gambling can be addictive. Please play responsibly.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Huntrez Rewards. All rights reserved. - Designed by: <a href="https://discord.com/users/1261209928803287154" rel="noopener noreferrer" target="_blank" class="designer">@Llakadmatatag</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Status Indicator -->
+    <div class="live-status-indicator animate-on-load" style="animation-delay: 1.2s">
+        <a href="https://kick.com/huntrez" target="_blank" rel="noopener noreferrer" class="live-status-link">
+            <div class="live-status-badge">
+                <span class="live-dot"></span>
+                <span class="live-text">LIVE</span>
+            </div>
+            <div class="live-status-info">
+                <span class="live-username">Huntrez</span>
+                <span class="live-viewers">0 viewers</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/particles.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/kick-status.js" defer></script>
+    <script src="js/xfun.js" defer></script>
+    
+    <!-- Coming Soon Popup -->
+    <div id="comingSoonPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h3>Coming Soon!</h3>
+            <p>The UPGRADER LEADERBOARD will be here soon!</p>
+            <button onclick="closeComingSoon()" class="btn btn-primary">OK</button>
+        </div>
+    </div>
+
+    <style>
+        /* Popup Styling */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--accent-1);
+            animation: popIn 0.3s ease-out;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .popup-content h3 {
+            color: var(--accent-1);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .popup-content p {
+            color: #e6e6e6;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .popup-content .btn {
+            padding: 0.5rem 2rem;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+
+    <script>
+        // Fungsi untuk menampilkan popup Coming Soon
+        function showComingSoon() {
+            document.getElementById('comingSoonPopup').style.display = 'flex';
+            // Mencegah scroll halaman saat popup terbuka
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Fungsi untuk menutup popup
+        function closeComingSoon() {
+            document.getElementById('comingSoonPopup').style.display = 'none';
+            // Mengembalikan scroll halaman
+            document.body.style.overflow = 'auto';
+        }
+
+        // Menutup popup saat menekan tombol ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeComingSoon();
+            }
+        });
+
+        // Menutup popup saat mengklik di luar konten popup
+        document.getElementById('comingSoonPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeComingSoon();
+            }
+        });
+    </script>
+</body>
+</html>

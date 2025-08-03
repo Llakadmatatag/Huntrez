@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Huntrez Rewards - Your premium casino rewards community">
+    <title>Huntrez Rewards - Premium Casino Community</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Gabarito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="logo-container animate-on-load" style="animation-delay: 0.2s">
+                    <img src="images/float-left.png" alt="" class="floating-image float-left">
+                    <div class="logo-content">
+                        <img src="images/logo.png" alt="Huntrez Rewards Logo" class="site-logo">
+                        <h1 class="logo"><span class="logo-huntrez">Huntrez</span><span class="logo-rewards">Rewards</span></h1>
+                    </div>
+                    <img src="images/float-right.png" alt="" class="floating-image float-right">
+                </div>
+                <p class="animate-on-load" style="animation-delay: 0.4s">Find the best rewards and bonuses over our partner sites below using code <span class="highlight-code">HUNTREZ</span></p>
+                
+                <div class="featured-leaderboard animate-on-load" style="animation-delay: 0.6s">
+                    <h3>Our Featured Leaderboards:</h3>
+                    <div class="sponsor-buttons">
+                        <a href="xfun.html" rel="noopener noreferrer" class="btn btn-secondary sponsor-btn">
+                            <img src="images/xfun1.png" alt="Sponsor 1" class="sponsor-logo">
+                        </a>
+                        <button type="button" class="btn btn-secondary sponsor-btn" onclick="showComingSoon()">
+                            <img src="images/upgrader.svg" alt="UPGRADER" class="sponsor-logo">
+                        </button>
+                        <a href="csbattle.html" rel="noopener noreferrer" class="btn btn-secondary sponsor-btn">
+                            <img src="images/csbattle.svg" alt="Sponsor 3" class="sponsor-logo">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons animate-on-load" style="animation-delay: 0.8s">
+                    <a href="#exclusive-bonuses" class="btn btn-primary">View All Bonuses</a>
+                    <a href="#exclusive-bonuses" class="scroll-down">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exclusive Bonuses Section -->
+        <section id="exclusive-bonuses" class="exclusive-bonuses">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Exclusive Bonuses</h2>
+                    <p>Find the best rewards and bonuses over our partner sites below using code <span class="highlight-code">HUNTREZ</span></p>
+                </div>
+                
+                <div class="promo-cards">
+                    <!-- CSBattle Promo Card -->
+                    <div class="promo-card">
+                        <div class="promo-logo">
+                            <img src="images/xfun1.png" alt="XFUN" class="sponsor-logo">
+                        </div>
+                        <div class="promo-code">
+                            <span>CODE - </span>
+                            <span class="code">HUNTREZ</span>
+                        </div>
+                        <div class="promo-details">
+                            <h3>Main Bonuses:</h3>
+                            <ul class="bonus-list">
+                                <li>Free 3 Cases</li>
+                                <li>Daily Free Case</li>
+                                <li>Leaderboard</li>
+                            </ul>
+                            <div class="special-bonus">
+                                <h4>Special Bonus:</h4>
+                                <p>5% Deposit Bonus</p>
+                            </div>
+                        </div>
+                        <a href="https://x.fun/r/Huntrez" rel="noopener noreferrer" target="_blank" class="btn btn-primary promo-btn">Visit XFUN</a>
+                        <div class="bonus-info">
+                            <a href="#" class="info-link show-bonus-info" data-site="xfun">How to claim deposit bonus (?)</a>
+                        </div>
+                    </div>
+
+                    <!-- Upgrader Promo Card -->
+                    <div class="promo-card">
+                        <div class="promo-logo">
+                            <img src="images/upgrader.svg" alt="UPGRADER" class="sponsor-logo">
+                        </div>
+                        <div class="promo-code">
+                            <span>CODE - </span>
+                            <span class="code">HUNTREZ</span>
+                        </div>
+                        <div class="promo-details">
+                            <h3>Main Bonuses:</h3>
+                            <ul class="bonus-list">
+                                <li>3 Free Cases</li>
+                                <li>Instant Rakeback</li>
+                                <li>Leaderboard (coming soon)</li>
+                            </ul>
+                            <div class="special-bonus">
+                                <h4>Special Bonus:</h4>
+                                <p>10% Deposit Bonus</p>
+                            </div>
+                        </div>
+                        <a href="https://upgrader.com/r/Huntrez" rel="noopener noreferrer" target="_blank" class="btn btn-primary promo-btn">Visit Upgrader</a>
+                        <div class="bonus-info">
+                            <a href="#" class="info-link show-bonus-info" data-site="upgrader">How to claim deposit bonus (?)</a>
+                        </div>
+                    </div>
+
+                    <!-- CSBattle Promo Card -->
+                    <div class="promo-card">
+                        <div class="promo-logo">
+                            <img src="images/csbattle.svg" alt="CSBattle" class="sponsor-logo">
+                        </div>
+                        <div class="promo-code">
+                            <span>CODE - </span>
+                            <span class="code">HUNTREZ</span>
+                        </div>
+                        <div class="promo-details">
+                            <h3>Main Bonuses:</h3>
+                            <ul class="bonus-list">
+                                <li>Free $2</li>
+                                <li>Instant Rakeback</li>
+                                <li>Leaderboard</li>
+                            </ul>
+                            <div class="special-bonus">
+                                <h4>Special Bonus:</h4>
+                                <p>10% Deposit Bonus</p>
+                            </div>
+                        </div>
+                        <a href="https://csbattle.com/r/Huntrez" rel="noopener noreferrer" target="_blank" class="btn btn-primary promo-btn">Visit CSBattle</a>
+                        <div class="bonus-info">
+                            <a href="#" class="info-link show-bonus-info" data-site="csbattle">How to claim deposit bonus (?)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Bagian 1: Logo -->
+                <div class="footer-section animate-on-load" style="animation-delay: 0.5s">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Huntrez Rewards" class="site-logo">
+                        <h2 class="logo"><span class="logo-huntrez">Huntrez</span><span class="logo-rewards">Rewards</span></h2>
+                    </div>
+                </div>
+
+                <!-- Bagian 2: Quick Links -->
+                <div class="footer-section animate-on-load" style="animation-delay: 0.6s">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#exclusive-bonuses">Bonuses</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bagian 3: Leaderboards -->
+                <div class="footer-section animate-on-load" style="animation-delay: 0.7s">
+                    <h3>Leaderboards</h3>
+                    <ul class="footer-links">
+                        <li><a href="xfun.html">XFun</a></li>
+                        <li><a href="#" onclick="event.preventDefault(); showComingSoon();">Upgrader</a></li>
+                        <li><a href="csbattle.html">CSBattle</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bagian 4: Connect with Us -->
+                <div class="footer-section animate-on-load" style="animation-delay: 0.8s">
+                    <h3>Connect with Us</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/23nYjWqreu" rel="noopener noreferrer" target="_blank" class="social-link" aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="https://kick.com/huntrez" rel="noopener noreferrer" target="_blank" class="social-link kick-link" aria-label="Kick">
+                            <img src="images/kick-logo.webp" alt="Kick" class="kick-logo">
+                        </a>
+                    </div>
+                    <div class="age-warning" style="margin-top: 1.5rem;">
+                        <p>18+ | Gambling can be addictive. Please play responsibly.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bawah -->
+            <div class="footer-bottom animate-on-load" style="animation-delay: 1s">
+                <p>&copy; 2025 Huntrez Rewards. All rights reserved. - Designed by: <a href="https://discord.com/users/1261209928803287154" rel="noopener noreferrer" target="_blank" class="designer">@Llakadmatatag</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bonus Info Modal -->
+    <div id="bonusInfoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="xfun">XFUN</button>
+                <button class="tab-btn" data-tab="upgrader">UPGRADER</button>
+                <button class="tab-btn" data-tab="csbattle">CSBATTLE</button>
+            </div>
+            
+            <div class="tab-content active" id="xfun-tab">
+                <h3>How to claim your XFUN deposit bonus:</h3>
+                <ol class="bonus-steps">
+                    <li>Make sure you use the code <strong>HUNTREZ</strong> on x.fun</li>
+                    <li>Make a deposit</li>
+                    <li>Create a ticket in our Discord and include:<br>
+                        - Screenshot of your deposit<br>
+                        - Full-screen screenshot showing you're under the code <strong>HUNTREZ</strong></li>
+                    <li>Our team will process your bonus within 24 hours (no need to spam)</li>
+                </ol>
+            </div>
+            
+            <div class="tab-content" id="upgrader-tab">
+                <h3>How to claim your UPGRADER deposit bonus:</h3>
+                <ol class="bonus-steps">
+                    <li>Make sure you use the code <strong>HUNTREZ</strong> on upgrader.com</li>
+                    <li>Make a deposit</li>
+                    <li>Create a ticket in our Discord and include:<br>
+                        - Screenshot of your deposit<br>
+                        - Full-screen screenshot showing you're under the code <strong>HUNTREZ</strong></li>
+                    <li>Our team will process your bonus within 24 hours (no need to spam)</li>
+                </ol>
+            </div>
+
+            <div class="tab-content" id="csbattle-tab">
+                <h3>How to claim your CSBattle deposit bonus:</h3>
+                <ol class="bonus-steps">
+                    <li>Make sure you use the code <strong>HUNTREZ</strong> on csbattle.com</li>
+                    <li>Make a deposit</li>
+                    <li>Create a ticket in our Discord and include:<br>
+                        - Screenshot of your deposit<br>
+                        - Full-screen screenshot showing you're under the code <strong>HUNTREZ</strong></li>
+                    <li>Our team will process your bonus within 24 hours (no need to spam)</li>
+                </ol>
+            </div>
+            
+            <div class="modal-actions">
+                <a href="https://discord.gg/23nYjWqreu" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open Discord</a>
+                <button class="btn btn-secondary close-modal-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Live Status Indicator -->
+    <div class="live-status-indicator">
+        <a href="https://kick.com/huntrez" target="_blank" rel="noopener noreferrer" class="live-status-link">
+            <div class="live-status-badge">
+                <span class="live-dot"></span>
+                <span class="live-text">LIVE</span>
+            </div>
+            <div class="live-status-info">
+                <span class="live-username">Huntrez</span>
+                <span class="live-viewers">0 viewers</span>
+            </div>
+        </a>
+    </div>
+
+    <script src="js/particles.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/lazyload.js" defer></script>
+    <script src="js/kick-status.js" defer></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Coming Soon Popup -->
+    <div id="comingSoonPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h3>Coming Soon!</h3>
+            <p>The UPGRADER LEADERBOARD will be here soon!</p>
+            <button onclick="closeComingSoon()" class="btn btn-primary">OK</button>
+        </div>
+    </div>
+
+    <style>
+        /* Popup Styling */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--accent-1);
+            animation: popIn 0.3s ease-out;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .popup-content h3 {
+            color: var(--accent-1);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .popup-content p {
+            color: #e6e6e6;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .popup-content .btn {
+            padding: 0.5rem 2rem;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+
+    <script>
+        // Fungsi untuk menampilkan popup Coming Soon
+        function showComingSoon() {
+            document.getElementById('comingSoonPopup').style.display = 'flex';
+            // Mencegah scroll halaman saat popup terbuka
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Fungsi untuk menutup popup
+        function closeComingSoon() {
+            document.getElementById('comingSoonPopup').style.display = 'none';
+            // Mengembalikan scroll halaman
+            document.body.style.overflow = 'auto';
+        }
+
+        // Menutup popup saat menekan tombol ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeComingSoon();
+            }
+        });
+
+        // Menutup popup saat mengklik di luar konten popup
+        document.getElementById('comingSoonPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeComingSoon();
+            }
+        });
+    </script>
+</body>
+</html>

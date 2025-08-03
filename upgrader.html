@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Huntrez Rewards - Upgrader Leaderboard">
+    <title>Upgrader Leaderboard - Huntrez Rewards</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Gabarito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/upgrader.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body class="upgrader-page">
+    <!-- Home Logo -->
+    <a href="index.html" class="home-logo" aria-label="Back to Home">
+        <img src="images/logo.png" alt="Home" class="home-logo-img">
+    </a>
+    
+    <!-- Sticky Menu -->
+    <div class="sticky-menu">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+            <span>Menu</span>
+        </button>
+        <nav class="dropdown-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="xfun.html"><img src="images/xfun-menu.png" alt="xfun" class="menu-icon"> XFun Leaderboard</a></li>
+                <li><a href="upgrader.html" class="active"><img src="images/upgrader-menu.jpg" alt="Upgrader" class="menu-icon"> Upgrader Leaderboard</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Leaderboard Section -->
+        <section class="leaderboard-section animate-on-load">
+            <div class="container">
+                <div class="leaderboard-header animate-on-load" style="animation-delay: 0.2s">
+                    <div class="logo-title">
+                        <img src="images/logo.png" alt="Huntrez" class="header-logo">
+                        <i class="fas fa-handshake logo-separator"></i>
+                        <a href="https://upgrader.com/r/Huntrez" rel="noopener noreferrer" target="_blank">
+                            <img src="images/upgrader.svg" alt="Upgrader" class="header-logo upgrader-logo">
+                        </a>
+                    </div>
+                    <h2>$500 MONTHLY LEADERBOARD</h2>
+                    
+                    <div class="leaderboard-note">
+                        <p>To be eligible for the leaderboard, make sure to use code <a href="https://upgrader.com/r/Huntrez" rel="noopener noreferrer" target="_blank" class="promo-code"><strong>HUNTREZ</strong></a> before making a deposit or wagering.</p>
+                    </div>
+                    
+                    <!-- Countdown Timer -->
+                    <div class="countdown-container">
+                        <p>Time remaining until leaderboard ends:</p>
+                        <div id="countdown" class="countdown">
+                            <div class="countdown-item">
+                                <span id="days">00</span>
+                                <span class="countdown-label">Days</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span id="hours">00</span>
+                                <span class="countdown-label">Hours</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span id="minutes">00</span>
+                                <span class="countdown-label">Minutes</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span id="seconds">00</span>
+                                <span class="countdown-label">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Podium Section -->
+                <div class="podium-container animate-on-load" style="animation-delay: 0.4s">
+                    <div class="podium">
+                        <!-- Second Place -->
+                        <div class="podium-item second-place">
+                            <div class="podium-crown">
+                                <i class="fas fa-crown silver"></i>
+                            </div>
+                            <div class="podium-rank">2nd</div>
+                            <div class="podium-avatar">
+                                <img src="https://via.placeholder.com/120" alt="Second Place" class="podium-img">
+                            </div>
+                            <div class="podium-details">
+                                <div class="podium-name">-</div>
+                                <div class="podium-wagered">-</div>
+                                <div class="podium-prize">-</div>
+                            </div>
+                        </div>
+                        
+                        <!-- First Place -->
+                        <div class="podium-item first-place">
+                            <div class="podium-crown">
+                                <i class="fas fa-crown gold spin"></i>
+                            </div>
+                            <div class="podium-rank">1st</div>
+                            <div class="podium-avatar">
+                                <img src="https://via.placeholder.com/160" alt="First Place" class="podium-img">
+                            </div>
+                            <div class="podium-details">
+                                <div class="podium-name">-</div>
+                                <div class="podium-wagered">-</div>
+                                <div class="podium-prize">-</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Third Place -->
+                        <div class="podium-item third-place">
+                            <div class="podium-crown">
+                                <i class="fas fa-crown bronze"></i>
+                            </div>
+                            <div class="podium-rank">3rd</div>
+                            <div class="podium-avatar">
+                                <img src="https://via.placeholder.com/100" alt="Third Place" class="podium-img">
+                            </div>
+                            <div class="podium-details">
+                                <div class="podium-name">-</div>
+                                <div class="podium-wagered">-</div>
+                                <div class="podium-prize">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="leaderboard-container animate-on-load" style="animation-delay: 0.6s">
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Wagered</th>
+                                <th>Prize</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+                            <!-- Leaderboard data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    
+                    <!-- Pagination Container -->
+                    <div class="pagination">
+                        <!-- Pagination buttons will be added here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo Section -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Huntrez Rewards" class="site-logo">
+                        <h2 class="logo"><span class="logo-huntrez">Huntrez</span><span class="logo-rewards">Rewards</span></h2>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#exclusive-bonuses">Bonuses</a></li>
+                    </ul>
+                </div>
+
+                <!-- Leaderboards -->
+                <div class="footer-section animate-on-load" style="animation-delay: 0.6s">
+                    <h3>Leaderboards</h3>
+                    <ul class="footer-links">
+                        <li><a href="xfun.html">XFun</a></li>
+                        <li><a href="upgrader.html">Upgrader</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect with Us -->
+                <div class="footer-section animate-on-load" style="animation-delay: 1.0s">
+                    <h3>Connect with Us</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/23nYjWqreu" rel="noopener noreferrer" target="_blank" class="social-link" aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="https://kick.com/huntrez" rel="noopener noreferrer" target="_blank" class="social-link kick-link" aria-label="Kick">
+                            <img src="images/kick-logo.webp" alt="Kick" class="kick-logo">
+                        </a>
+                    </div>
+                    <div class="age-warning" style="margin-top: 1.5rem;">
+                        <p>18+ | Gambling can be addictive. Please play responsibly.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Huntrez Rewards. All rights reserved. - Designed by: <a href="https://discord.com/users/1261209928803287154" rel="noopener noreferrer" target="_blank" class="designer">@Llakadmatatag</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Status Indicator -->
+    <div class="live-status-indicator animate-on-load" style="animation-delay: 1.2s">
+        <a href="https://kick.com/huntrez" target="_blank" rel="noopener noreferrer" class="live-status-link">
+            <div class="live-status-badge">
+                <span class="live-dot"></span>
+                <span class="live-text">LIVE</span>
+            </div>
+            <div class="live-status-info">
+                <span class="live-username">Huntrez</span>
+                <span class="live-viewers">0 viewers</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/particles.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/kick-status.js" defer></script>
+    <script src="js/upgrader.js" defer></script>
+</body>
+</html>
